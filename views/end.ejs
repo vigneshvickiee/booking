@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="/styles.css" rel="stylesheet">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <nav>
+            <div class="site-title">
+                <a href="/"><h1>Book-My-Show</h1></a>
+                <p>Way ahead</p>
+            </div>
+            <ul>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/admin">Admin</a></li>
+                <li><a href="/blogs/create"></a></li>
+            </ul>           
+        </nav>
+        
+        <div class="blogs content">
+            <br><br>
+            <h4>Seats Reserved</h4>
+            <% if(seats.length>0) { %>
+                <% for(var i=0;i<seats.length;i++){ %>
+                    <tab><%= seats[i] %></tab>
+                <% } %>
+                <% } else { %>
+                <% } %>
+    
+                    </div>
+                    <br>
+                    <br>
+        </div>
+        <center>
+            <h2>Thankyou for Booking</h2>
+        </center>
+        <div class="blogs content">
+            <h2>Now Showing</h2>
+            <% if(movies.length>0) { %>
+            <% movies.forEach(movies => { %>
+                <a class="single" href="/login">
+                <h2><%= movies.title %></h2>
+                </a>
+            <% }) %>
+            <% } else { %>
+            <p> Wait for the screens to Open. Stay SAFE! </p> 
+            <% } %>
+        </div>
+    </body>
+</html>

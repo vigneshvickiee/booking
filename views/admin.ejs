@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link href="/styles.css" rel="stylesheet">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <nav>
+            <div class="site-title">
+                <a href="/"><h1>Book-My-Show</h1></a>
+                <p>Way ahead</p>
+            </div>
+            <ul>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/admin">Admin</a></li>
+                <li><a href="/blogs/create"></a></li>
+            </ul>           
+        </nav>
+        <div class="seatStructure">
+            <center>
+          
+        <table id="seatsBlock">
+         <p id="notification"></p>
+          <tr>
+            <td colspan="14"><div class="screen">SCREEN</div></td>
+            <td rowspan="20">
+              <div class="smallBox greenBox">Selected Seat</div> <br/>
+              <div class="smallBox redBox">Reserved Seat</div><br/>
+              <div class="smallBox emptyBox">Empty Seat</div><br/>
+            </td>
+            
+            <br/>
+          </tr>
+          
+          <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td></td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+          
+        <tr>
+            <td>A</td>
+            <td><input type="checkbox" name="seatno" id="A1" class="seats" value="A1"></td>
+            <td><input type="checkbox" name="seatno" id="A2" class="seats" value="A2"></td>
+            <td><input type="checkbox" name="seatno" id="A3"class="seats" value="A3"></td>
+            <td><input type="checkbox" name="seatno" id="A4"class="seats" value="A4"></td>
+            <td><input type="checkbox" name="seatno" id="A5" class="seats" value="A5"></td>
+            <td class="seatGap"></td>
+            <td><input type="checkbox" name="seatno" id="A6"class="seats" value="A6"></td>
+            <td><input type="checkbox" name="seatno" id="A7"class="seats" value="A7"></td>
+            <td><input type="checkbox" name="seatno" id="A8"class="seats" value="A8"></td>
+            <td><input type="checkbox" name="seatno" id="A9"class="seats" value="A9"></td>
+            <td><input type="checkbox" name="seatno" id="A10"class="seats" value="A10"></td>
+            <td><input type="checkbox" name="seatno" id="A11"class="seats" value="A11"></td>
+            <td><input type="checkbox" name="seatno" id="A12"class="seats" value="A12"></td>
+          </tr>
+          
+          <tr>
+            <td>B</td>
+            <td><input type="checkbox" name="seatno" id="B1"class="seats" value="B1"></td>
+            <td><input type="checkbox" name="seatno" id="B2"class="seats" value="B2"></td>
+            <td><input type="checkbox" name="seatno" id="B3"class="seats" value="B3"></td>
+            <td><input type="checkbox" name="seatno" id="B4"class="seats" value="B4"></td>
+            <td><input type="checkbox" name="seatno" id="B5"class="seats" value="B5"></td>
+            <td></td>
+            <td><input type="checkbox" name="seatno" id="B6"class="seats" value="B6"></td>
+            <td><input type="checkbox" name="seatno" id="B7"class="seats" value="B7"></td>
+            <td><input type="checkbox" name="seatno" id="B8"class="seats" value="B8"></td>
+            <td><input type="checkbox" name="seatno" id="B9"class="seats" value="B9"></td>
+            <td><input type="checkbox" name="seatno" id="B10"class="seats" value="B10"></td>
+            <td><input type="checkbox" name="seatno" id="B11"class="seats" value="B11"></td>
+            <td><input type="checkbox" name="seatno" id="B12"class="seats" value="B12"></td>
+          </tr>
+          
+          <tr>
+            <td>C</td>
+            <td><input type="checkbox" name="seatno" id="C1"class="seats" value="C1"></td>
+            <td><input type="checkbox" name="seatno" id="C2"class="seats" value="C2"></td>
+            <td><input type="checkbox" name="seatno" id="C3"class="seats" value="C3"></td>
+            <td><input type="checkbox" name="seatno" id="C4"class="seats" value="C4"></td>
+            <td><input type="checkbox" name="seatno" id="C5"class="seats" value="C5"></td>
+            <td></td>
+            <td><input type="checkbox" name="seatno" id="C6"class="seats" value="C6"></td>
+            <td><input type="checkbox" name="seatno" id="C7"class="seats" value="C7"></td>
+            <td><input type="checkbox" name="seatno" id="C8"class="seats" value="C8"></td>
+            <td><input type="checkbox" name="seatno" id="C9"class="seats" value="C9"></td>
+            <td><input type="checkbox" name="seatno" id="C10"class="seats" value="C10"></td>
+            <td><input type="checkbox" name="seatno" id="C11"class="seats" value="C11"></td>
+            <td><input type="checkbox" name="seatno" id="C12"class="seats" value="C12"></td>
+        </tr>
+            </table>
+        </center>
+        </div>
+
+
+        <div class="blogs content">
+            <br><br>
+            <h4>Seats Reserved</h4>
+            <% if(seats.length>0) { %>
+                <% for(var i=0;i<seats.length;i++){ %>
+                    <tab><%= seats[i] %></tab>
+                <% } %>
+                <% } else { %>
+                <% } %>
+    
+                    </div>
+                    <br>
+                    <br>
+        <div class="blogs content">
+            <h2>Now Showing</h2>
+            <% if(movies.length>0) { %>
+            <% movies.forEach(movies => { %>
+                <a class="single" href="/login">
+                <h2><%= movies.title %></h2>
+                </a>
+            <% }) %>
+            <% } else { %>
+            <p> Wait for the screens to Open. Stay SAFE! </p> 
+            <% } %>
+        </div>
+    </body>
+</html>
